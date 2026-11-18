@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #181825;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #313244;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.balance-box {
+    color: #a6e3a1;
+}
+
+.click-power {
+    color: #f9e2af;
+}
+
+/* Coin Section */
+.coin-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#coin-btn {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffe66d, #f5b041);
+    border: 6px solid #d68910;
+    color: #5c3a00;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+#coin-btn:hover {
+    transform: scale(1.03);
+}
+
+#coin-btn:active {
+    transform: scale(0.94);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Shop Section */
+.shop-section {
+    margin-bottom: 40px;
+}
+
+.shop-section h2, .inventory-section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #313244;
+    padding-bottom: 8px;
+}
+
+.boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.box-card {
+    background: #181825;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #313244;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.box-card h3 {
+    margin-bottom: 10px;
+    color: #89b4fa;
+}
+
+.odds {
+    font-size: 0.85rem;
+    color: #a6adc8;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.buy-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #89b4fa;
+    color: #11111b;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.buy-btn:hover:not(:disabled) {
+    background-color: #b4befe;
+}
+
+.buy-btn:disabled {
+    background-color: #45475a;
+    color: #7f849c;
+    cursor: not-allowed;
+}
+
+/* Unboxing Result Banner */
+.unbox-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #313244;
+    animation: popIn 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Inventory Section */
+.subtitle {
+    font-size: 0.9rem;
+    color: #a6adc8;
+    margin-bottom: 15px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.food-card {
+    background: #181825;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #313244;
+    transition: transform 0.2s;
+}
+
+.food-card.locked {
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+.food-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.food-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.food-rarity {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.food-bonus {
+    font-size: 0.8rem;
+    color: #a6e3a1;
+    margin-top: 5px;
+}
+
+/* Rarity Colors */
+.rarity-Common { border-color: #9399b2; color: #9399b2; }
+.rarity-Rare { border-color: #89b4fa; color: #89b4fa; }
+.rarity-Epic { border-color: #cba6f7; color: #cba6f7; }
+.rarity-Legendary { border-color: #f9e2af; color: #f9e2af; box-shadow: 0 0 12px rgba(249, 226, 175, 0.25); }
